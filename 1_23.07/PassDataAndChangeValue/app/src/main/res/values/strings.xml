@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">PassDataAndChangeValue</string>
+    <string name="input_data">Input data</string>
+    <string name="send">send</string>
+    <string name="copy_to_edittext">Copy to editText</string>
+    <string name="text">Here will be modified text</string>
+</resources>
