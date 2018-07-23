@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">OpenWebPage</string>
+    <string name="input_url">Input url</string>
+    <string name="open">open</string>
+    <string name="google_link">https://www.google.com/#q=</string>
+    <string name="yandex_link">https://yandex.com/search/?text=</string>
+</resources>
