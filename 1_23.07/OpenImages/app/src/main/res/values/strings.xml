@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">OpenImages</string>
+    <string name="from_res">From res</string>
+    <string name="from_gallery">From gallery</string>
+    <string name="url">Url</string>
+    <string name="light_yellow">#e7c05c</string>
+    <string name="image_url">Input image url</string>
+</resources>
