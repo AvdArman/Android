@@ -1,7 +1,5 @@
 package com.example.arman.counter;
 
-import android.content.res.Configuration;
-import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -12,21 +10,16 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private static final String KEY_INDEX = "key1";
     private TextView tvCounter;
-    private Button btnInc;
-    private Button btnDec;
     private Integer count = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        if (Configuration.ORIENTATION_PORTRAIT == MainActivity.this.getResources().getConfiguration().orientation) {
-            setContentView(R.layout.activity_main);
-        } else {
-            setContentView(R.layout.activity_main_land);
-        }
+        setContentView(R.layout.activity_main);
+
         tvCounter = findViewById(R.id.tv_count);
-        btnInc = findViewById(R.id.btn_inc);
-        btnDec = findViewById(R.id.btn_dec);
+        final Button btnInc = findViewById(R.id.btn_inc);
+        final Button btnDec = findViewById(R.id.btn_dec);
         btnInc.setOnClickListener(this);
         btnDec.setOnClickListener(this);
         if (savedInstanceState != null) {
@@ -46,7 +39,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 --count;
                 break;
         }
-
         tvCounter.setText(count.toString());
     }
 

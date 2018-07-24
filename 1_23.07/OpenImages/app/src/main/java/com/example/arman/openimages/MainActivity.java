@@ -15,6 +15,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
+
 import java.io.IOException;
 import java.io.InputStream;
 
@@ -56,7 +57,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 Intent intent = new Intent();
                 intent.setType("image/*");
                 intent.setAction(Intent.ACTION_GET_CONTENT);
-                startActivityForResult(Intent.createChooser(intent, "Select picture"), CODE);
+                startActivityForResult(Intent.createChooser(intent, getString(R.string.select_picture)), CODE);
                 break;
             case R.id.btn_url:
                 new DownloadImage(image).execute(etUrl.getText().toString());
@@ -86,7 +87,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         public DownloadImage(ImageView imageView) {
             this.imageView = imageView;
-            Toast.makeText(getApplicationContext(), "Please wait, it may take a few minute...", Toast.LENGTH_SHORT).show();
+            Toast.makeText(getApplicationContext(), R.string.waiting, Toast.LENGTH_SHORT).show();
         }
 
         protected Bitmap doInBackground(String... urls) {
@@ -98,7 +99,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 bimage = BitmapFactory.decodeStream(in);
 
             } catch (Exception e) {
-                Log.e("Error Message", e.getMessage());
+                Log.e(getString(R.string.error_message), e.getMessage());
                 e.printStackTrace();
             }
             return bimage;
@@ -106,7 +107,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         protected void onPostExecute(Bitmap result) {
             if (result == null) {
-                Toast.makeText(MainActivity.this, "Something is wrong image not found", Toast.LENGTH_SHORT).show();
+                Toast.makeText(MainActivity.this, R.string.wrong_case, Toast.LENGTH_SHORT).show();
             }
             imageView.setImageBitmap(result);
         }

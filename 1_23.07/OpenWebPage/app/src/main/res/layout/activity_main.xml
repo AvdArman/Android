@@ -26,20 +26,20 @@
         android:orientation="vertical">
 
         <TextView
-            android:text="Search engine(default google)"
+            android:text="@string/search_engine_text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"/>
 
         <CheckBox
             android:id="@+id/chk_google"
-            android:text="Google"
+            android:text="@string/google"
             android:checked="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 
         <CheckBox
             android:id="@+id/chk_yandex"
-            android:text="Yandex"
+            android:text="@string/yandex"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
 

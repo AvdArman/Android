@@ -9,16 +9,14 @@ import android.widget.EditText;
 
 public class DataActivity extends AppCompatActivity {
 
-    private EditText etData;
-    private Button btnModify;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_data);
+        final EditText etData = findViewById(R.id.et_modify);
 
-        etData = findViewById(R.id.et_modify);
-        btnModify = findViewById(R.id.btn_modify);
+        final Button btnModify = findViewById(R.id.btn_modify);
         etData.setText(getIntent().getStringExtra(MainActivity.DATA_KEY));
         btnModify.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -14,7 +14,7 @@ import android.widget.EditText;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
     private EditText etUrl;
     private Button btnOpen;
@@ -26,10 +26,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        etUrl = findViewById(R.id.et_url);
-        btnOpen = findViewById(R.id.btn_open);
-        chkGoogle = findViewById(R.id.chk_google);
-        chkYandex = findViewById(R.id.chk_yandex);
+        findViews();
+        setListeners();
+    }
+
+    private void setListeners() {
         chkGoogle.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton compoundButton, boolean b) {
@@ -46,22 +47,16 @@ public class MainActivity extends AppCompatActivity {
                 searchEngine = getString(R.string.yandex_link);
             }
         });
-
-        btnOpen.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                String url = etUrl.getText().toString();
-                Intent browserIntent;
-                if (isValidUrl(url)) {
-                    url = "http://" + url;
-                    browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
-                } else {
-                    browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(searchEngine + url));
-                }
-                startActivity(browserIntent);
-            }
-        });
+        btnOpen.setOnClickListener(this);
     }
+
+    private void findViews() {
+        etUrl = findViewById(R.id.et_url);
+        btnOpen = findViewById(R.id.btn_open);
+        chkGoogle = findViewById(R.id.chk_google);
+        chkYandex = findViewById(R.id.chk_yandex);
+    }
+
 
     private boolean isValidUrl(String url) {
         if (!url.startsWith("http://") && !url.startsWith("https://")) {
@@ -70,5 +65,20 @@ public class MainActivity extends AppCompatActivity {
         Pattern pattern = Patterns.WEB_URL;
         Matcher matcher = pattern.matcher(url.toLowerCase());
         return matcher.matches();
+    }
+
+    @Override
+    public void onClick(View view) {
+        if (view.getId() == R.id.btn_open) {
+            String url = etUrl.getText().toString();
+            Intent browserIntent;
+            if (isValidUrl(url)) {
+                url = "http://" + url;
+                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+            } else {
+                browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(searchEngine + url));
+            }
+            startActivity(browserIntent);
+        }
     }
 }

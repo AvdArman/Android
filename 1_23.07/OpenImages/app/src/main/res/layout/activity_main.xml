@@ -26,8 +26,8 @@
             android:layout_height="wrap_content"
             android:text="@string/from_res"
             android:background="@color/blue"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp" />
+            android:layout_marginRight="@dimen/btn_margin"
+            android:layout_marginEnd="@dimen/btn_margin" />
 
         <Button
             android:id="@+id/btn_gallery"
@@ -35,8 +35,8 @@
             android:layout_height="wrap_content"
             android:text="@string/from_gallery"
             android:background="@color/light_green"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp" />
+            android:layout_marginRight="@dimen/btn_margin"
+            android:layout_marginEnd="@dimen/btn_margin" />
 
         <Button
             android:id="@+id/btn_url"
@@ -51,6 +51,7 @@
         android:id="@+id/et_url"
         android:hint="@string/image_url"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:inputType="textUri"/>
 
 </LinearLayout>

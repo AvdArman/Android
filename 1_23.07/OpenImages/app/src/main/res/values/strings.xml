@@ -5,4 +5,8 @@
     <string name="url">Url</string>
     <string name="light_yellow">#e7c05c</string>
     <string name="image_url">Input image url</string>
+    <string name="waiting">Please wait, it may take a few minute...</string>
+    <string name="wrong_case">Something is wrong image not found</string>
+    <string name="select_picture">Select picture</string>
+    <string name="error_message">Error Message</string>
 </resources>
