@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Film</string>
+    <string name="title_activity_film">FilmActivity</string>
+    <string name="mad_max">Mad Max: Fury Road</string>
+    <string name="transformers_4">Transformers 4</string>
+    <string name="titanic">Titanic</string>
+    <string name="fast_and_furious_8">Fast and furious 8</string>
+    <string name="mad_max_description">Action, Adventure, Sci-Fi \n15 May 2015 (USA)</string>
+    <string name="transformers_description">Action, Adventure, Sci-Fi \n27 June 2014 (USA)</string>
+    <string name="titanic_description">Drama, Romance \n19 December 1997 (USA)</string>
+    <string name="fast_and_furious_8_description">Action, Crime, Thriller \n14 April 2017 (USA)</string>
+    <string name="mad_max_url">https://www.imdb.com/title/tt1392190/</string>
+    <string name="transformers_4_url">https://www.imdb.com/title/tt2109248/?ref_=fn_al_tt_1</string>
+    <string name="titanic_url">https://www.imdb.com/title/tt0120338/?ref_=nv_sr_1</string>
+    <string name="fast_furious_url">https://www.imdb.com/title/tt4630562/?ref_=nv_sr_1</string>
+</resources>
