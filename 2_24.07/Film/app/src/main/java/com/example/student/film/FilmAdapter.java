@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.RatingBar;
 import android.widget.TextView;
+
 import java.util.List;
 
 
@@ -17,6 +18,7 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.MyViewHolder> 
     private List<Movie> moviesList;
     private boolean filled = false;
     private int tmpPosition;
+    private View tmpView;
 
     public FilmAdapter(List<Movie> moviesList) {
         this.moviesList = moviesList;
@@ -26,41 +28,45 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.MyViewHolder> 
     public MyViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
         View itemView = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.content_film, parent, false);
-        itemView.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent browserIntent = new Intent(Intent.ACTION_VIEW,
-                        Uri.parse(moviesList.get(tmpPosition).getUrl()));
-                view.getContext().startActivity(browserIntent);
-            }
-        });
-
+        tmpView = itemView;
         return new MyViewHolder(itemView);
     }
 
     @Override
-    public void onBindViewHolder(final MyViewHolder holder, int position) {
+    public void onBindViewHolder(final MyViewHolder holder, final int position) {
         tmpPosition = position;
         Movie movie = moviesList.get(position);
         holder.tvTitle.setText(movie.getTitle());
         holder.image.setImageDrawable(movie.getImage());
         holder.tvDescription.setText(movie.getDescription());
         holder.ratingBar.setRating(movie.getRating());
-        holder.imgHeart.setImageResource(R.mipmap.empty_heart2);
-        holder.imgHeart.setOnClickListener(new View.OnClickListener() {
+        holder.btnHeart.setImageResource(R.drawable.ic_black_heart);
+        holder.btnHeart.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                if (!filled) {
-                    holder.imgHeart.setImageResource(R.mipmap.filled_heart2);
-                    filled = true;
-                } else {
-                    holder.imgHeart.setImageResource(R.mipmap.empty_heart2);
-                    filled = false;
-                }
-                holder.imgHeart.setMaxWidth(50);
+                setHeart(holder);
+            }
+        });
+        tmpView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW,
+                        Uri.parse(moviesList.get(position).getUrl()));
+                view.getContext().startActivity(browserIntent);
             }
         });
     }
+
+    private void setHeart(MyViewHolder holder) {
+        if (!filled) {
+            holder.btnHeart.setImageResource(R.drawable.ic_red_heart);
+            filled = true;
+        } else {
+            holder.btnHeart.setImageResource(R.drawable.ic_black_heart);
+            filled = false;
+        }
+    }
+
 
     @Override
     public int getItemCount() {
@@ -68,11 +74,11 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.MyViewHolder> 
     }
 
     public class MyViewHolder extends RecyclerView.ViewHolder {
-        public TextView tvTitle;
-        public ImageView image;
-        public TextView tvDescription;
-        public RatingBar ratingBar;
-        public ImageView imgHeart;
+        private TextView tvTitle;
+        private ImageView image;
+        private TextView tvDescription;
+        private RatingBar ratingBar;
+        private ImageView btnHeart;
 
         public MyViewHolder(View view) {
             super(view);
@@ -80,8 +86,7 @@ public class FilmAdapter extends RecyclerView.Adapter<FilmAdapter.MyViewHolder> 
             image = view.findViewById(R.id.img);
             tvDescription = view.findViewById(R.id.tv_description);
             ratingBar = view.findViewById(R.id.rating);
-            imgHeart = view.findViewById(R.id.img_heart);
-
+            btnHeart = view.findViewById(R.id.btn_heart);
         }
     }
 }

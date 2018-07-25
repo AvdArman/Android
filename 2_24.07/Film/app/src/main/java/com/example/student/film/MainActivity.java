@@ -1,8 +1,9 @@
 package com.example.student.film;
 
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 
@@ -11,20 +12,21 @@ import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
-    List<Movie> movieList = new LinkedList<>();
+    private List<Movie> movieList = new LinkedList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        RecyclerView recyclerView = findViewById(R.id.rv_films);
-        FilmAdapter filmAdapter = new FilmAdapter(movieList);
-        RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getApplicationContext());
-        recyclerView.setLayoutManager(mLayoutManager);
-        recyclerView.setItemAnimator(new DefaultItemAnimator());
-        recyclerView.setAdapter(filmAdapter);
+        final RecyclerView recyclerView = findViewById(R.id.rv_films);
         addMovieData();
-        filmAdapter.notifyDataSetChanged();
+        FilmAdapter filmAdapter = new FilmAdapter(movieList);
+        if (this.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT) {
+            recyclerView.setLayoutManager(new LinearLayoutManager(getApplicationContext()));
+        } else {
+            recyclerView.setLayoutManager(new GridLayoutManager(this, 2));
+        }
+        recyclerView.setAdapter(filmAdapter);
     }
 
     private void addMovieData() {
@@ -44,7 +46,7 @@ public class MainActivity extends AppCompatActivity {
         movieList.add(movie);
 
         movie = new Movie(getString(R.string.fast_and_furious_8), getString(R.string.fast_and_furious_8_description),
-                getResources().getDrawable(R.drawable.fast_and_furious_8), 4.5f);
+                getResources().getDrawable(R.drawable.fate_of_the_furious), 4.5f);
         movie.setUrl(getString(R.string.fast_furious_url));
         movieList.add(movie);
     }

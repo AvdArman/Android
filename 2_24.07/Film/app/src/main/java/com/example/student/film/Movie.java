@@ -11,8 +11,6 @@ public class Movie {
     private boolean like;
     private String url;
 
-
-
     public Movie(String title, String description, Drawable image, Float rating) {
         this.title = title;
         this.description = description;
