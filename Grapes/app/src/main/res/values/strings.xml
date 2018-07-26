@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Grapes</string>
     <string name="first_page_text">Hello, this is a quick overview of Grapes application</string>
-    <string name="second_page_text">\tGrapes is a peer-to-peer technology-based project, that allows people of large communities, share their files instantly for a long-term saving</string>
+    <string name="second_page_text">Grapes is a peer-to-peer technology-based project, that allows people of large communities, share their files instantly for a long-term saving</string>
     <string name="third_page_text">Grapes is a file sharing, uploading and downloading tool without centralized file storage</string>
-    <string name="skip">skip</string>
+    <string name="skip"><u>skip</u></string>
 </resources>

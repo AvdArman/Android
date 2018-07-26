@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="oval_size">200dp</dimen>
+    <dimen name="oval_size">220dp</dimen>
     <dimen name="text_size">18sp</dimen>
     <dimen name="margin_top">100dp</dimen>
     <dimen name="padding_top">60dp</dimen>

@@ -4,6 +4,7 @@ import android.support.v4.view.PagerAdapter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.List;
@@ -27,10 +28,16 @@ class CustomPagerAdapter extends PagerAdapter {
     public Object instantiateItem(ViewGroup container, int position) {
         View itemView = LayoutInflater.from(container.getContext())
                 .inflate(R.layout.preview_activity, container, false);
-        CircleImageView img = itemView.findViewById(R.id.image);
-        TextView textView = itemView.findViewById(R.id.tv_text);
-        img.setImageResource(previewObjectsList.get(position).getImg());
-        textView.setText(previewObjectsList.get(position).getText());
+        PreviewObjects previewObjects = previewObjectsList.get(position);
+        ImageView img = itemView.findViewById(R.id.image);
+        TextView tvText = itemView.findViewById(R.id.tv_text);
+        img.setImageResource(previewObjects.getImg());
+        tvText.setText(previewObjects.getText());
+        if (previewObjects.getLogoText() != null) {
+            img.setMaxWidth(50);
+            TextView tvLogoText = itemView.findViewById(R.id.tv_logo_text);
+            tvLogoText.setText("Grapes");
+        }
         container.addView(itemView);
         return itemView;
     }
