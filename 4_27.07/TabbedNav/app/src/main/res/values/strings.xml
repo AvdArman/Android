@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">TabbedNav</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="tab_text_3">Tab 3</string>
+    <string name="home_fragment_text">This is a \"home\" fragment</string>
+    <string name="about_fragment_text">This is a \"about\" fragment</string>
+    <string name="favorite_fragment_text">This is a \"Favorites\" fragment</string>
+</resources>
