@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="@dimen/rv_image_size"
+    android:layout_height="@dimen/rv_image_size">
+
+    <ImageView
+        android:id="@+id/single_image"
+        android:layout_width="@dimen/rv_image_size"
+        android:layout_height="@dimen/rv_image_size"
+        android:scaleType="centerCrop"/>
+
+</android.support.constraint.ConstraintLayout>
