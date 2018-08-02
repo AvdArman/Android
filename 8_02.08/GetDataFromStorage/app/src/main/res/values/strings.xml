@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GetDataFromStorage</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="click_to_browse_image">Click to browse image</string>
+    <string name="deleted_item">Deleted item</string>
+    <string name="fill_field_text">Please fill all the fields...</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_canceled">Canceled</string>
+    <string name="image_choose_error">Something went wrong</string>
+    <string name="not_pick_image">You haven\'t picked Image</string>
+    <string name="uploading">Uploading...</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="failed">Failed</string>
+</resources>
