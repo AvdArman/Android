@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Todo</string>
+    <string name="slider_skip"><u>skip</u></string>
+    <string name="first_page_text">Welcome to \"TODO\" application</string>
+    <string name="second_page_text">From work to play, To-Do is the
+        easiest way to get stuff done, every day.</string>
+    <string name="third_page_text">Manage your works with this app</string>
+    <string name="email_hint">email</string>
+    <string name="password_hint">password</string>
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="register">register</string>
+    <string name="confirm_password">confirm password</string>
+    <string name="please_wait">Please wait…</string>
+    <string name="authentication">Authentication…</string>
+    <string name="title">Title</string>
+    <string name="description">Description</string>
+    <string name="click_to_browse_image">Click to browse image</string>
+    <string name="deleted_item">Item deleted</string>
+    <string name="fill_field_text">Please fill title, date and time fields</string>
+    <string name="dialog_cancel">Cancel</string>
+    <string name="dialog_canceled">Canceled</string>
+    <string name="image_choose_error">Something went wrong</string>
+    <string name="not_pick_image">You haven\'t picked Image</string>
+    <string name="uploading">Uploading…</string>
+    <string name="uploaded">Uploaded</string>
+    <string name="failed">Failed</string>
+    <string name="action_search">action_search</string>
+    <string name="choose_date">Choose date</string>
+    <string name="choose_time">Choose time</string>
+</resources>
