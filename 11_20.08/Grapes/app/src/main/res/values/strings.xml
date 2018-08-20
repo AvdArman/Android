@@ -1,0 +1,54 @@
+<resources>
+    <string name="app_name">Grapes</string>
+    <string name="first_page_text">Hello, this is a quick overview of Grapes application</string>
+    <string name="second_page_text">Grapes is a peer-to-peer technology-based project, that allows people of large communities, share their files instantly for a long-term saving</string>
+    <string name="third_page_text">Grapes is a file sharing, uploading and downloading tool without centralized file storage</string>
+    <string name="skip"><u>skip</u></string>
+    <string name="grapes">Grapes</string>
+    <string name="title_activity_preview">PreviewActivity</string>
+    <string name="title_activity_about">About</string>
+
+    <string name="submit">Submit</string>
+    <string name="mNickname">Nickname</string>
+    <string name="title_activity_temp">TempActivity</string>
+
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_active_nodes">Active Nodes</string>
+    <string name="action_about">About</string>
+
+    <string name="title_activity_tabs">Tabs</string>
+    <string name="hello_second_fragment">second_text</string>
+    <string name="sort_by">Sort by:</string>
+    <string name="active_nodes">Active Nodes</string>
+    <string name="_192_168_1_1">192.168.1.1</string>
+    <string name="user">user</string>
+    <string name="chooser_canceled">Storage Chooser Cancelled.</string>
+
+    <string name="instigate_name">Instigate Mobile CJSC</string>
+    <string name="by_itc_9">Produced by ITC-9</string>
+    <string name="our_team">Our team</string>
+
+
+    <string-array name="categories">
+        <item>All</item>
+        <item>Pictures</item>
+        <item>Videos</item>
+        <item>Musics</item>
+        <item>Books</item>
+        <item>Other</item>
+    </string-array>
+
+    <string-array name="sort_by">
+        <item>Name</item>
+        <item>Date</item>
+        <item>File size</item>
+    </string-array>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="delete">delete</string>
+</resources>

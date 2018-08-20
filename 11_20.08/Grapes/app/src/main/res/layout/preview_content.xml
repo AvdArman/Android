@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/transparent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_marginTop="@dimen/margin_top"
+        android:layout_width="@dimen/oval_size"
+        android:layout_height="@dimen/oval_size"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:background="@drawable/logo_oval">
+
+        <ImageView
+            android:id="@+id/preview_image"
+            android:layout_width="@dimen/image_size"
+            android:layout_height="@dimen/image_size"
+            android:layout_gravity="center"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:id="@+id/tv_logo_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/preview_image"
+            android:textAlignment="center"
+            android:textColor="@color/text_color"
+            android:textSize="@dimen/logo_text_size" />
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_text"
+        android:layout_width="@dimen/text_width"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_top"
+        android:gravity="center_horizontal"
+        android:textAlignment="center"
+        android:textColor="@color/text_color"
+        android:textSize="@dimen/text_size" />
+
+</LinearLayout>

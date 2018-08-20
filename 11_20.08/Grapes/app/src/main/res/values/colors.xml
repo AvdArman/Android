@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#490250</color>
+    <color name="colorPrimaryDark">#490250</color>
+    <color name="oval_color">#59a9a1a1</color>
+    <color name="text_color">#ffffff</color>
+    <color name="colorAccent">#e2e2e2</color>
+    <color name="grey">#E2E2E2</color>
+    <color name="textColor">#c9c8c8</color>
+    <color name="colorPurple">#490250</color>
+    <color name="colorThistle">#D8BFD8</color>
+    <color name="colorPoorWhite">#E2e2e2</color>
+    <color name="colorAccentBlue">#728BF2</color>
+</resources>

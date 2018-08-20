@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single" android:id="@+id/status">
+        <item android:title="Download/Upload" />
+        <item
+            android:id="@+id/nav_download"
+            android:icon="@drawable/ic_download"
+            android:title="music.mp3" />
+        <item
+            android:id="@+id/nav_download2"
+            android:icon="@drawable/ic_download"
+            android:title="file.pdf" />
+        <item
+            android:id="@+id/nav_upload"
+            android:icon="@drawable/ic_upload"
+            android:title="file.txt" />
+        <item
+            android:id="@+id/nav_upload2"
+            android:icon="@drawable/ic_upload"
+            android:title="book.pdf" />
+
+        <item
+            android:icon="@drawable/ic_download"
+            android:title="music.mp3" />
+        <item
+            android:icon="@drawable/ic_download"
+            android:title="file.pdf" />
+        <item
+            android:icon="@drawable/ic_upload"
+            android:title="file.txt" />
+        <item
+            android:icon="@drawable/ic_upload"
+            android:title="book.pdf" />
+        <item
+            android:icon="@drawable/ic_download"
+            android:title="music.mp3" />
+        <item
+            android:icon="@drawable/ic_download"
+            android:title="file.pdf" />
+        <item
+            android:icon="@drawable/ic_upload"
+            android:title="file.txt" />
+        <item
+            android:icon="@drawable/ic_upload"
+            android:title="book.pdf" />
+    </group>
+
+    <group>
+        <item
+            android:id="@+id/ic_exit"
+            android:icon="@drawable/ic_exit"
+            android:title="Exit" />
+    </group>
+</menu>

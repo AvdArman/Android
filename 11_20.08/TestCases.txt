@@ -1,0 +1,22 @@
+1. Test Cases
+
+1.1 Login Page
+
+Test 1:
+
+Preconditions: The user launches the app for the first time
+
+Steps:
+
+1. The user inputs nickname.
+2. The user taps on SUBMIT button
+
+Expected Behavior: The home page is opened with the following items:
+
+1. The navigation bar is displayed.
+
+2. The search field is displayed
+
+3. The add button is displayed.
+
+4. The sort and categories fields are displayed with values "Name" and "All.
